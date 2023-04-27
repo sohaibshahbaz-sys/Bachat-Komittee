@@ -9,6 +9,7 @@ export default function App() {
     
     useEffect(() => {
         const onAppLoad = () => {
+            // TODO: Add app loading here
             setTimeout(() => { setIsAppLoaded(true)}, 5000 ); // set the timeout duration to 2 seconds
         }
         onAppLoad();

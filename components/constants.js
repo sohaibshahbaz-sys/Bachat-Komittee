@@ -5,4 +5,9 @@ const typography = {
     lineHeight: 18.46,
   };
   
-  export default typography;
+const container = {
+    paddingLeft: 20,
+    marginTop: 50
+}
+
+export {typography, container};

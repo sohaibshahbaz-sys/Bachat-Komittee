@@ -3,15 +3,15 @@ import { View } from "react-native"
 import { AirbnbRating } from '@rneui/themed';
 import { SafeAreaView } from "react-native";
 import { StyleSheet, Image } from 'react-native';
-import typography from '../components/constants.js';
+import * as styles from '../components/constants.js';
 
 
 const Splash = () => {
 
   return (
      <View style={{ backgroundColor: 'blue', flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-     <View style={styles.safeArea}>
-     <SafeAreaView style={styles.imageContainer}>
+     <View>
+     <SafeAreaView style={styleSheet.imageContainer}>
         <Image
         // style={styles.imageContainer}
         source={require('../assets/vector.png')}
@@ -26,12 +26,12 @@ const Splash = () => {
    </View>  
   )
 }
-const styles = StyleSheet.create({
+const styleSheet = StyleSheet.create({
     text: {
-      fontFamily: typography.fontFamily,
-      fontWeight: typography.fontWeight,
-      fontSize: typography.fontSize,
-      lineHeight: typography.lineHeight,
+      fontFamily: styles.typography.fontFamily,
+      fontWeight: styles.typography.fontWeight,
+      fontSize: styles.typography.fontSize,
+      lineHeight: styles.typography.lineHeight,
     },
     imageContainer: {
       display:'flex',
