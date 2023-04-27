@@ -6,7 +6,7 @@ import { StyleSheet, Image } from 'react-native';
 import typography from '../components/constants.js'
 
 
-const getStarted = () =>{
+const GetStarted = () =>{
     return(
         <View>
             <Text>Hello from getStarted</Text>
@@ -16,4 +16,4 @@ const getStarted = () =>{
 
 }
 
-export default getStarted
+export default GetStarted

@@ -4,18 +4,10 @@ import { AirbnbRating } from '@rneui/themed';
 import { SafeAreaView } from "react-native";
 import { StyleSheet, Image } from 'react-native';
 import typography from '../components/constants.js';
-import { useEffect } from 'react';
-import { useNavigation } from '@react-navigation/native';
 
 
 const Splash = () => {
-  const navigation = useNavigation();
 
-  useEffect(() => {
-    setTimeout(() => {
-      navigation.navigate('getStarted'); // navigate to GetStarted component after 3 seconds
-    }, 2000); // set the timeout duration to 2 seconds
-  }, []);
   return (
      <View style={{ backgroundColor: 'blue', flex: 1, justifyContent: 'center', alignItems: 'center' }}>
      <View style={styles.safeArea}>

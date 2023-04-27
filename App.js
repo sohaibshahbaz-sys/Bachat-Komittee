@@ -1,29 +1,29 @@
 import { View } from 'react-native';
 import Splash from './screens/Splash';
-import getStarted from './screens/getStarted';
-import { SafeAreaView } from 'react-native';
+import GetStarted from './screens/GetStarted';
 import { StyleSheet } from 'react-native';
-import { BVLinearGradient } from 'react-native-linear-gradient';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-const Stack = createStackNavigator();
-
+import { useEffect, useState } from 'react';
 
 export default function App() {
+    const [appLoaded, setIsAppLoaded] = useState(false);
+    
+    useEffect(() => {
+        const onAppLoad = () => {
+            setTimeout(() => { setIsAppLoaded(true)}, 5000 ); // set the timeout duration to 2 seconds
+        }
+        onAppLoad();
+    }, [])
+
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Splash} />
-        <Stack.Screen name="getStarted" component={getStarted} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+        { !appLoaded ? <Splash/> : <GetStarted/> }
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   safeArea: {
-    // flex: 1,
-    // padding: 20,
+    flex: 1,
+    padding: 20,
   },
 });
