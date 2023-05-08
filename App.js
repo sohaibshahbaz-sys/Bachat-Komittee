@@ -1,10 +1,11 @@
 import { View } from 'react-native';
 import Splash from './screens/Splash';
-import GetStarted from './screens/GetStarted';
+import GetStarted from './screens/getStarted';
 import { StyleSheet } from 'react-native';
 import { useEffect, useState } from 'react';
 import PublicProfile from './screens/PublicProfile';
 import { useFonts } from 'expo-font';
+import Home1 from './screens/Home1';
 
 export default function App() {
     const [appLoaded, setIsAppLoaded] = useState(true);
@@ -21,7 +22,7 @@ export default function App() {
 
   return (
     <>
-        { !appLoaded ? <Splash/> : <PublicProfile/> }
+        { !appLoaded ? <Splash/> : <Home1/> }
     </>
   );
 }

@@ -1,5 +1,4 @@
 const typography = {
-    fontFamily: 'Mont',
     fontWeight: '700',
     fontSize: 14,
     lineHeight: 18.46,
@@ -9,7 +8,18 @@ const container = {
     paddingLeft: 20,
     marginTop: 50
 }
-
+const fontFamily ={
+    montRegular: 'Mont-ExtraLightDEMO',
+}
+async function loadFonts() {
+    try {
+        await Font.loadAsync({
+          'Mont-ExtraLightDEMO': require('../assets/font/Mont-ExtraLightDEMO.otf'),
+        });
+      } catch (error) {
+        console.log(error);
+      }
+  }
 const publicProfileCss = {
     paddingLeft: 20,
     paddingTop: 50,
@@ -54,7 +64,8 @@ const publicProfileCss = {
     },
     mb: {
         marginBottom: 17
-    }
+    },
+    
 };
 
-export {typography, container, publicProfileCss};
+export {typography, container, publicProfileCss,loadFonts,fontFamily};
